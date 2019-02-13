@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: 56fddde0721ab2b4fbc655b7a6f67177
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter.unity
+    guid: 3e4368b834aa3c643a40df1fefa002d2
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelA.unity
+    guid: 91d06456895477b4da0da663c81961a1
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelB.unity
+    guid: 6f734d5b10416a84f85a56f836afd02b
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelC.unity
+    guid: e71cc80fefb8bc94c9589aa7917ea933
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelD.unity
+    guid: 9b2accb0c76d45f49bcffd7664acacbd
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelE.unity
+    guid: 3980918cd742f5740ba3039d372a4696
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelF.unity
+    guid: 857f9489f09afde42893de3740165a52
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelG.unity
+    guid: b90af1d329aa41f42b5d120007d49405
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelH.unity
+    guid: 2cedc8590442d84498f19a744b8c1a55
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelI.unity
+    guid: e3456bc157e65d44b875dc17fe8cc072
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelJ.unity
+    guid: bf750b8d17d278447a9f45eed4831619
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelK.unity
+    guid: dc44ee3487fc04c448749e7e1966eec5
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelL.unity
+    guid: 167557ffd2314874ab511c12008760d4
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelM.unity
+    guid: c89b31e12a1d6f2428dd7d7983e5f837
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelN.unity
+    guid: 583d7097aebb5d8408ba47fb41eccb20
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelO.unity
+    guid: 7d574ef5352d35a49bbebe19d48ee2b6
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelP.unity
+    guid: 8b7d23a38280cde46a8dba9508525c4e
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelQ.unity
+    guid: 91b03e66e38e6a94aab1d07d824c27b8
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelR.unity
+    guid: 3e6e1c995a1471340810bf9978cc65ac
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelS.unity
+    guid: 3094251bdea6878469103f11dfe13ddf
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelT.unity
+    guid: f35ed61928239a7409037474fcd9d987
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelU.unity
+    guid: 61e0c3d695394114d833afd23a3c4ec9
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelV.unity
+    guid: e75dc452802fba74682176b11c9e7bce
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelW.unity
+    guid: f424387b30d199b4482c436ba1c55d49
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelX.unity
+    guid: 4c7b0e341fcf7f8488c7a9d52ab67444
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelY.unity
+    guid: 79f011e8f5d91d64b8b9708b02952a06
+  - enabled: 1
+    path: Assets/Scenes/RoboShooter/LevelZ.unity
+    guid: af9ff648556cb58488b6a90b2617a11f
+  m_configObjects: {}

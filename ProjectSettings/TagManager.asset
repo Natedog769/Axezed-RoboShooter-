@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GunPickUP1
+  - GunPickUP2
+  - GunPickUP3
+  - DualWield
+  - MGBullet
+  - Laser
+  - Missile1
+  - Missile2
+  - PlayerAmmo
+  - EnemyAmmo
+  - Enemy
+  - LGunPickUp1
+  - LGunPickUp2
+  - LGunPickUp3
+  - ShieldPickUp
+  - Shield
+  - WalkableGround
+  - Border
+  - DamageEffect
+  - ArmorStation1
+  - ArmorStation2
+  - ArmorStation3
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
