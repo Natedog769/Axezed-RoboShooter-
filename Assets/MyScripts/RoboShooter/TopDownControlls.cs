@@ -38,6 +38,7 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
     public GameObject lHand;
     //this is the gameobject with the effect script and animation of an explosion
     public EffectScript deathExplosion;
+    public EffectScript rechargeEffect;
     public Shield activeShieldObject;
 
     public bool shieldIsActive = false;
@@ -215,11 +216,11 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
         }
         else if (gameState == StateGame.lose)
         {
-            UI.playScreen.gameObject.SetActive(false);
-            UI.winScreen.gameObject.SetActive(false);
             UI.endScreen.gameObject.SetActive(true);
+            UI.playScreen.gameObject.SetActive(false);
+            UI.winScreen.gameObject.SetActive(false);           
             UI.bossColorScreen.gameObject.SetActive(false);
-
+            gameObject.SetActive(false);
         }
     }
 
@@ -297,14 +298,15 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
             {//if its greater than 0 then it activates the activebattery built in method to recharge it at the cost of one power level.
                 activeBattery.RechargeBattery();
                 powerLevel--;
-                //Instantiate(rechargeEffect, transform.position, transform.rotation);
+                Instantiate(rechargeEffect, transform.position, transform.rotation);
             }
             else
             {// if it cannot recharge [the powerlevel is at zero] then the game is lost
-                playerState = StatePlayer.dead;
+
                 gameState = StateGame.lose;
+                playerState = StatePlayer.dead;
                 Instantiate(deathExplosion, transform.position, transform.rotation);
-                gameObject.SetActive(false);
+                
             }
         }
         else
