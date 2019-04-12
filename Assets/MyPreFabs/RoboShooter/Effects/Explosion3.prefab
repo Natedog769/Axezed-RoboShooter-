@@ -114,4 +114,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 0.5
   shakeAmp: 1.5
-  shakeFreq: 1
+  shakeFreq: 2

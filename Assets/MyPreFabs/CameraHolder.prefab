@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2749645881179592510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.60192, y: -32.30768, z: -24.922844}
+  m_LocalPosition: {x: -69.30192, y: -21.357773, z: -24.922844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2749645881443459788}
@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2749645881443459790}
   - component: {fileID: 2749645881443459789}
   - component: {fileID: 2749645881443459791}
+  - component: {fileID: 2050512545}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -154,13 +155,29 @@ MonoBehaviour:
   m_BindingMode: 3
   m_FollowOffset: {x: 0, y: 6.62, z: -26.39}
   m_XDamping: 3
-  m_YDamping: 1
+  m_YDamping: 1.5
   m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 5
   m_YawDamping: 5
   m_RollDamping: 1
   m_AngularDamping: 0
+--- !u!114 &2050512545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749645881443459779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &2749645881866179182
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2749645881866179182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.60192, y: -32.30768, z: -24.922844}
+  m_LocalPosition: {x: -69.30192, y: -21.357773, z: -24.922844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2238143041208616953}
@@ -290,6 +307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2238143041208616953}
+  - component: {fileID: 4883131}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -313,3 +331,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4883131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592633771246188805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256cf34454682074cb589205be9d06be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShakeDuration: 0.3
+  ShakeAmplitude: 1.2
+  ShakeFrequency: 2
+  maxShakeDuration: 5
+  maxShakeAmp: 2.5
+  maxShakeFreq: 3
+  VirtualCamera: {fileID: 2749645881179592511}

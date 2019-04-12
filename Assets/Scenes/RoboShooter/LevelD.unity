@@ -1017,6 +1017,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArmorStation Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7368292351483930526, guid: 25e79dec40082aa41a619f3610cc06b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: ArmorStation2
+      objectReference: {fileID: 0}
     - target: {fileID: 7368292351483930523, guid: 25e79dec40082aa41a619f3610cc06b1,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -6,11 +6,15 @@ using Cinemachine;
 public class CameraShake : MonoBehaviour
 {
 
-    public float ShakeDuration = 0.3f;          // Time the Camera Shake effect will last
-    public float ShakeAmplitude = 1.2f;         // Cinemachine Noise Profile Parameter
-    public float ShakeFrequency = 2.0f;         // Cinemachine Noise Profile Parameter
+    public float ShakeDuration = 0.0f;          // Time the Camera Shake effect will last
+    public float ShakeAmplitude = 0f;         // Cinemachine Noise Profile Parameter
+    public float ShakeFrequency = 0f;         // Cinemachine Noise Profile Parameter
 
     private float ShakeElapsedTime = 0f;
+    [Space]
+    public float maxShakeDuration = 5;
+    public float maxShakeAmp = 5;
+    public float maxShakeFreq = 5;
 
     // Cinemachine Shake
     public CinemachineVirtualCamera VirtualCamera;
@@ -30,9 +34,13 @@ public class CameraShake : MonoBehaviour
 
     void OnEffectShake(EffectScript firedEffect)
     {
+
         ShakeDuration = firedEffect.lifeTime;
-        ShakeAmplitude = firedEffect.shakeAmp;
-        ShakeFrequency = firedEffect.shakeFreq;
+
+        if (ShakeAmplitude < maxShakeAmp)
+            ShakeAmplitude += firedEffect.shakeAmp;
+        if(ShakeFrequency < maxShakeFreq)
+            ShakeFrequency += firedEffect.shakeFreq;
 
         ShakeElapsedTime = ShakeDuration;
     }
@@ -59,6 +67,11 @@ public class CameraShake : MonoBehaviour
                 // If Camera Shake effect is over, reset variables
                 virtualCameraNoise.m_AmplitudeGain = 0f;
                 ShakeElapsedTime = 0f;
+
+                ShakeFrequency = 0;
+                ShakeDuration = 0;
+                ShakeAmplitude = 0;
+
             }
         }
     }
