@@ -674,8 +674,10 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
             lHGunState = StateGun.lvl3;
         }
 
-        if (pickUp.CompareTag("ArmorStation1")) ChangeArmorStateTo(0);
-        
+        if (pickUp.CompareTag("ArmorStation1"))
+        {
+            ChangeArmorStateTo(0);
+        }
 
         if (pickUp.CompareTag("ArmorStation2"))
         {//level 2 check
