@@ -13,7 +13,7 @@ public class VariableSceneLoader : EditorWindow
     static bool toggle;
     static int safeCounter;
 
-    [MenuItem("Window/Variable Scene Loader")]
+    [MenuItem("Extentions/Variable Scene Loader")]
     static void Init()
     {
 
