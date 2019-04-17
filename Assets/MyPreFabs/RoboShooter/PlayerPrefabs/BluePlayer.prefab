@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColorState: 0
   bullet: {fileID: 114263404603029750, guid: cbe59cca90e3e2048852f16bf73fa6fb, type: 3}
-  laser: {fileID: 114254124532718886, guid: ad63689d45fc0d943ba51034e976439f, type: 3}
+  laser: {fileID: 5116971712791347131, guid: 3ae16ea7e030e4b208461f634197c681, type: 3}
   missile1: {fileID: 114187818773235980, guid: 5e7f5c2e645f813479a5a0ecc379fe16, type: 3}
   rocket: {fileID: 114767263636653430, guid: 6804b1dc8f4b3b446aeaa12951b65873, type: 3}
 --- !u!1 &1208679860800258
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerColorState: 0
   bullet: {fileID: 114263404603029750, guid: cbe59cca90e3e2048852f16bf73fa6fb, type: 3}
-  laser: {fileID: 114394565542274458, guid: a402c90da909a7c49be719d25066b9db, type: 3}
+  laser: {fileID: 5116971712791347131, guid: 3ae16ea7e030e4b208461f634197c681, type: 3}
   missile1: {fileID: 114187818773235980, guid: 5e7f5c2e645f813479a5a0ecc379fe16, type: 3}
   rocket: {fileID: 114767263636653430, guid: 6804b1dc8f4b3b446aeaa12951b65873, type: 3}
 --- !u!1001 &1925008796
