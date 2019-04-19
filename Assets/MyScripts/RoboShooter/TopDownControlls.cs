@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TopDownControlls : MonoBehaviour, ITakeDamage {
     //this is the Natedog 2d TopDownControls lots of public varibles and methods and states,
@@ -538,7 +539,7 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
       
     public void ChangeToColorGREEN()
     {
-        if (greenBossHasBeenDefeated)
+        if (greenBossHasBeenDefeated || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Endless"))
         {
             Debug.Log("Changing to GREEN");
             colorState = StateArmorColorSet.green;
@@ -551,7 +552,7 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
     
     public void ChangeToColorRED()
     {
-        if (redBossHasBeenDefeated)
+        if (redBossHasBeenDefeated || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Endless"))
         {
             Debug.Log("Changing to red");
             colorState = StateArmorColorSet.red;

@@ -16,6 +16,7 @@ public class UIEventManager : MonoBehaviour {
     public Canvas pauseScreen;
     public Canvas winScreen;
     public Canvas endScreen;
+    public Canvas endlessScreen;
     public HealthBattery playersBattery;
     public Text xPUILabel;
     public Text greenButtonLabel;
@@ -70,6 +71,12 @@ public class UIEventManager : MonoBehaviour {
     }
 
    
+    public void PlayEndlessMode()
+    {
+        playScreen.gameObject.SetActive(true);
+        endlessScreen.gameObject.SetActive(false);
+
+    }
 
 
     //start events
