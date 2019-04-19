@@ -47,7 +47,14 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public virtual void Update () {
+
+        AIactions();
+        HPCheck();
+	}
+
+    public void AIactions()
+    {
         if (mediumTank == true || smallTank == true)
         {//small and med tanks will patrol and then purue the player once in attacking range.
             if (Vector2.Distance(transform.position, player.position) > attackingDistance)
@@ -61,7 +68,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
                 RotateTurret();
             }
         }
-        else if(largeTank == true)
+        else if (largeTank == true)
         {//if its a large tank then it will patrol and shoot only
 
             if (Vector2.Distance(transform.position, player.position) > attackingDistance)
@@ -76,9 +83,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
                 RotateTurret();
             }
         }
-        
-        HPCheck();
-	}
+    }
 
     public void ShootTurrets()
     {
@@ -92,7 +97,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
         }
     }
 
-    void HPCheck()
+    public void HPCheck()
     {
         if (enemyState == EnemyState.dead)
         {
@@ -137,7 +142,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
 
     }
 
-    void MoveTowardsPlayer()
+    public void MoveTowardsPlayer()
     {
 
         if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
