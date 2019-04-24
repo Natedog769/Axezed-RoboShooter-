@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class HordeSpawner : MonoBehaviour
 {
+    public int currentWave;
+    public int numberOfEnemiesThisWave;
+    public float waveWaitTime;
 
-    public float timeBetweenWaves;
-    public float spawnTimer =0f;
-    public int waveNumber;
+    public List<HordeModeBehaviour> enemiesOfThisWave = new List<HordeModeBehaviour>();
     public HordeModeBehaviour[] enemyTypeForWave;//ideally we will have 10 enemy waves that will repeat but grow in numbers
     public int[] numOfEnemiesToSpawnThisRound;
 
     void Start()
     {
-        ResetTime();
+        ResetTime()
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnWave();
+        WaveWaitTimer();
         
     }
 
@@ -46,7 +47,14 @@ public class HordeSpawner : MonoBehaviour
     }
 
 
-
+    void WaveWaitTimer()
+    {
+        if (waveWaitTime < 0)
+        {
+            ResetTime();
+        }
+        else waveWaitTime -= Time.deltaTime;
+    }
 
     void ResetTime()
     {
