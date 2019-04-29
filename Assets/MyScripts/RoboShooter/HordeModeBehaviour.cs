@@ -5,6 +5,7 @@ using UnityEngine;
 public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
 {
     public float speed;
+    public float rotSpeed;
     public int hitPoints;
 
     public float stoppingDistance;
@@ -22,9 +23,12 @@ public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
     // Update is called once per frame
     void Update()
     {
-        MoveTowardsTargetThreat();
+       if (enemyState == EnemyState.alive)
+        { MoveTowardsTargetThreat();
+        Rotate();
         // AttackIfCloseToTarget();
         HPCheck();
+        }
     }
 
     void FindaThreat()
@@ -49,12 +53,19 @@ public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
         }
 
     }
-
+    void Rotate()
+    {//this module will step thru the turret array and move them all
+        
+        Vector2 direction = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
+      
+            transform.up = direction * rotSpeed;
+        
+    }
     void HPCheck()
     {
         if (enemyState == EnemyState.dead)
         {
-            SeperateBodyParts();
+            gameObject.tag =  "WalkableGround";
         }
 
     }
@@ -62,7 +73,6 @@ public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
 
     public void SeperateBodyParts()
     {
-        speed = 0;
     }
 
     public void TakeDamage(int damage)

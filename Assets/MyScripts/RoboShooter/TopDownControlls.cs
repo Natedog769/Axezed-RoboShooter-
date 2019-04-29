@@ -571,7 +571,9 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
 
         if (hitItem.CompareTag("EnemyAmmo"))
         {//if that item is enemyammo then it will take the projectilebehaviours damage out vairable and takedamage with that amount
-            TakeDamage(hitItem.GetComponent<ProjectileBehaviour>().damageOut);
+            ProjectileBehaviour hit = hitItem.GetComponent<ProjectileBehaviour>();
+            if (hit != null)
+                TakeDamage(hit.damageOut);
 
         }
         else if (hitItem.CompareTag("Enemy"))

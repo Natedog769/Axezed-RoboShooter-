@@ -18,8 +18,7 @@ public abstract class ProjectileBehaviour : MonoBehaviour {
     // Update is called once per frame
     public virtual void Update()
     {
-        lifeTime -= Time.deltaTime;
-
+        
         transform.Translate(Vector2.up * speed * Time.deltaTime);
         if (lifeTime <= 0)
         {
@@ -28,14 +27,19 @@ public abstract class ProjectileBehaviour : MonoBehaviour {
 
             Destroy(gameObject);
         }
+        else lifeTime -= Time.deltaTime;
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (playersProjectile == true)
         {//if it is a player projectile it will ignore the player and not hit the play
-            if (collision.tag != "Player" && collision.tag != "PlayerAmmo")
+            if (collision.CompareTag("Player") || collision.CompareTag("PlayerAmmo") || collision.CompareTag("WalkableGround"))
+            {
+
+            }
+            else
             {
                 if (hitEffect != null)
                     Instantiate(hitEffect, transform.position, transform.rotation);
@@ -45,7 +49,7 @@ public abstract class ProjectileBehaviour : MonoBehaviour {
         }
         else if (playersProjectile == false)
         {
-            if (collision.tag != "Enemy" && collision.tag != "EnemyAmmo")
+            if (!collision.CompareTag("Enemy") && !collision.CompareTag("EnemyAmmo") && !collision.CompareTag("WalkableGround"))
             {
                 if (hitEffect != null)
                     Instantiate(hitEffect, transform.position, transform.rotation);

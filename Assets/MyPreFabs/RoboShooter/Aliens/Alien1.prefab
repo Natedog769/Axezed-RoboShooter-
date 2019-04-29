@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6882434318433630575}
   - component: {fileID: 4727636881681987355}
+  - component: {fileID: 2439762521177518390}
   m_Layer: 0
   m_Name: Alien1_0003_Arm
-  m_TagString: Untagged
+  m_TagString: EnemyAmmo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +80,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2439762521177518390
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606921416973805996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027158886, y: -0.094171524}
+  m_Size: {x: 0.64626056, y: 1.965241}
+  m_Direction: 0
 --- !u!1 &5531619407156654526
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,9 +187,10 @@ GameObject:
   - component: {fileID: 606241696646726575}
   - component: {fileID: 8082477735334100278}
   - component: {fileID: 836670576888939103}
+  - component: {fileID: 7148714363290912159}
   m_Layer: 0
   m_Name: Alien1
-  m_TagString: Untagged
+  m_TagString: EnemyAmmo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,20 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e91b67b5efd31e4584523c7ed92695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallTank: 0
-  mediumTank: 0
-  largeTank: 0
-  xPValue: 100
-  hitPoints: 2
-  deathExplosion: {fileID: 0}
-  patrolStops: []
-  patrolStopWaitTime: 0
   speed: 5
-  turretRotSpeed: 0
-  attackingDistance: 10
+  rotSpeed: 3
+  hitPoints: 2
   stoppingDistance: 1
   retreatDistance: 0.5
-  turret: []
 --- !u!50 &8082477735334100278
 Rigidbody2D:
   serializedVersion: 4
@@ -252,12 +261,29 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.025396232, y: -0.0000000030274663}
   m_Size: {x: 2.385854, y: 1.0000085}
   m_Direction: 1
+--- !u!114 &7148714363290912159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592736813114034045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOut: 2
+  speed: 0
+  lifeTime: 0
+  hitEffect: {fileID: 0}
+  playersProjectile: 0
 --- !u!1 &6028510757159276675
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,9 +373,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2391488063798066533}
   - component: {fileID: 7334070995005165909}
+  - component: {fileID: 6212884903344366912}
   m_Layer: 0
   m_Name: Alien1_0002_Arm-copy-10
-  m_TagString: Untagged
+  m_TagString: EnemyAmmo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,3 +443,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &6212884903344366912
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470898087026776043}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.013379872, y: -0.14384627}
+  m_Size: {x: 0.64436185, y: 2.1151605}
+  m_Direction: 0

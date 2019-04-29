@@ -93,7 +93,7 @@ public class WeaponScript : MonoBehaviour {
         if (playerColorState == StatePlayerColor.green)
         {
             if (GetComponentInParent<TopDownControlls>().lHGunState == TopDownControlls.StateGun.lvl1)
-                Instantiate(laser, transform.position, transform.rotation);
+                StartCoroutine(FireRocket());
 
             if (GetComponentInParent<TopDownControlls>().lHGunState == TopDownControlls.StateGun.lvl2)
             {
