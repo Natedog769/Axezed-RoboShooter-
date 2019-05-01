@@ -11,20 +11,22 @@ public class SceneSelection : MonoBehaviour {
     int levelToLoad;
 
     public int mainMenu;
-    public int game1;
+    public int gameAZStart;
+    public int game2Start;
     Scene currentScreen;
     //and so on
 
 
     public void Start()
     {
-
+       
         currentScreen = SceneManager.GetActiveScene();
+        if (currentScreen.buildIndex == 0) FindObjectOfType<AudioManager>().Play("Intro");
     }
 
     public void Update()
     {
-
+       
     }
 
     public void LoadNextLevel()
@@ -48,12 +50,16 @@ public class SceneSelection : MonoBehaviour {
     //for each level we have we need a method
     public void LoadGame1()
     {
-        levelToLoad = game1; //the level to load;
+        levelToLoad = gameAZStart; //the level to load;
         anim.SetTrigger("FadeOut");
     }
-    
 
-   
+    public void LoadGame2()
+    {
+        levelToLoad = game2Start; //the level to load;
+        anim.SetTrigger("FadeOut");
+    }
+
 
     public void QuitToMenu()
     {

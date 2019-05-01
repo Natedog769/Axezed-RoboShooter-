@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.373132, g: 0.3807496, b: 0.3587258, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -595,11 +595,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114111740068234576, guid: aa550b94733720f459d7e496022eabf6,
-        type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.519
-      objectReference: {fileID: 0}
     - target: {fileID: 224029563431296558, guid: aa550b94733720f459d7e496022eabf6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -614,6 +609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.54992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111740068234576, guid: aa550b94733720f459d7e496022eabf6,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.519
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa550b94733720f459d7e496022eabf6, type: 3}
@@ -3834,16 +3834,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraHolder
       objectReference: {fileID: 0}
-    - target: {fileID: 2749645881179592511, guid: 92cffdd5a4fae5641977faa61e2caef3,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 391617139}
-    - target: {fileID: 2749645881179592511, guid: 92cffdd5a4fae5641977faa61e2caef3,
-        type: 3}
-      propertyPath: m_LookAt
-      value: 
-      objectReference: {fileID: 391617139}
     - target: {fileID: 2238143041208616953, guid: 92cffdd5a4fae5641977faa61e2caef3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3919,6 +3909,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -21.357773
       objectReference: {fileID: 0}
+    - target: {fileID: 2749645881179592511, guid: 92cffdd5a4fae5641977faa61e2caef3,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 391617139}
+    - target: {fileID: 2749645881179592511, guid: 92cffdd5a4fae5641977faa61e2caef3,
+        type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 391617139}
     - target: {fileID: 2749645881443459791, guid: 92cffdd5a4fae5641977faa61e2caef3,
         type: 3}
       propertyPath: m_YDamping
@@ -5971,7 +5971,7 @@ PrefabInstance:
     - target: {fileID: 7802498867338200774, guid: 80e08398428ee5648ac72a5334c90e2e,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0
+      value: 0.845
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80e08398428ee5648ac72a5334c90e2e, type: 3}

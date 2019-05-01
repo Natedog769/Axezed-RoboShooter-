@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.373132, g: 0.3807496, b: 0.3587258, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1339571848}
-        m_MethodName: LoadNextLevel
+        m_MethodName: LoadGame1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1053,6 +1053,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 135175944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &902346777
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1994347540437353658, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -81.62341
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.118073
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.53125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789155001753665838, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802498867338200774, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802498867338200774, guid: 80e08398428ee5648ac72a5334c90e2e,
+        type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fd31536581b51f4ea1b9b9ab24c8920, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80e08398428ee5648ac72a5334c90e2e, type: 3}
 --- !u!1 &911854650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1550,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1339571848}
-        m_MethodName: LoadNextLevel
+        m_MethodName: LoadGame2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1790,6 +1869,7 @@ MonoBehaviour:
   pauseScreen: {fileID: 0}
   winScreen: {fileID: 0}
   endScreen: {fileID: 475621947}
+  endlessScreen: {fileID: 0}
   playersBattery: {fileID: 0}
   xPUILabel: {fileID: 0}
   greenButtonLabel: {fileID: 0}
@@ -1831,7 +1911,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1339571847}
   mainMenu: 0
-  game1: 1
+  gameAZStart: 2
+  game2Start: 1
 --- !u!114 &1339571849
 MonoBehaviour:
   m_ObjectHideFlags: 0
