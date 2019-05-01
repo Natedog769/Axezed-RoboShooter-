@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6882434318433630575}
   - component: {fileID: 4727636881681987355}
   - component: {fileID: 2439762521177518390}
+  - component: {fileID: 6513792355339850792}
   m_Layer: 0
   m_Name: Alien1_0003_Arm
   m_TagString: EnemyAmmo
@@ -96,6 +97,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0.027158886, y: -0.094171524}
   m_Size: {x: 0.64626056, y: 1.965241}
   m_Direction: 0
+--- !u!114 &6513792355339850792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606921416973805996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOut: 2
+  speed: 0
+  lifeTime: 0
+  hitEffect: {fileID: 0}
+  playersProjectile: 0
 --- !u!1 &5531619407156654526
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +208,7 @@ GameObject:
   - component: {fileID: 7148714363290912159}
   m_Layer: 0
   m_Name: Alien1
-  m_TagString: EnemyAmmo
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,6 +392,7 @@ GameObject:
   - component: {fileID: 2391488063798066533}
   - component: {fileID: 7334070995005165909}
   - component: {fileID: 6212884903344366912}
+  - component: {fileID: 3427371401562556918}
   m_Layer: 0
   m_Name: Alien1_0002_Arm-copy-10
   m_TagString: EnemyAmmo
@@ -459,3 +478,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.013379872, y: -0.14384627}
   m_Size: {x: 0.64436185, y: 2.1151605}
   m_Direction: 0
+--- !u!114 &3427371401562556918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470898087026776043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOut: 2
+  speed: 0
+  lifeTime: 0
+  hitEffect: {fileID: 0}
+  playersProjectile: 0

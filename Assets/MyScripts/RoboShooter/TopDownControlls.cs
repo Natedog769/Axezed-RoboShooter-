@@ -11,7 +11,7 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
     //lets start with the 3 hidden variables
     //these are objects that the player finds when it awakes and start. if there is no GM or UI or healthbattery the controlls dont work
     UIEventManager UI;
-    GameManager GM;
+    GameManager GM { get { return GameManager.singleton; } }
     HealthBattery activeBattery;
     
     //these are speed variables they are set in the inspector
@@ -72,19 +72,7 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
     public enum StateGun { lvl1 = 0, lvl2 = 1, lvl3 = 2}
     public StateGun rHGunState;
     public StateGun lHGunState;
-   
-    
-
-
-
-    private void Awake()
-    {//when the controls awake it finds the GM then ask the GM what state what the player it was last im
-        GM = FindObjectOfType<GameManager>();
-        //it tracks the power level or number of batterys the player has collected
-        GMModule();
-
-
-    }
+  
 
     void GMModule()
     {
@@ -124,6 +112,7 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
     }
 
     void Start () {
+        GMModule();
         //anim = GetComponent<Animator>();
         playerState = StatePlayer.alive;
         //at the 

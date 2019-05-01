@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5018580779681418624}
   - component: {fileID: 6251170229690976333}
+  - component: {fileID: 8418554709732526649}
+  - component: {fileID: 3880853443794309112}
   m_Layer: 0
   m_Name: Alien2_0004_Arm-copy-11
-  m_TagString: Untagged
+  m_TagString: EnemyAmmo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,6 +82,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &8418554709732526649
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3454058633591014860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1768454, y: 0}
+  m_Size: {x: 0.5663093, y: 2.59}
+  m_Direction: 0
+--- !u!114 &3880853443794309112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3454058633591014860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOut: 3
+  speed: 0
+  lifeTime: 0
+  hitEffect: {fileID: 0}
+  playersProjectile: 0
 --- !u!1 &4112091963245207081
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e91b67b5efd31e4584523c7ed92695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  rotSpeed: 3
+  hitPoints: 4
+  stoppingDistance: 1
+  retreatDistance: 0.5
 --- !u!70 &3438358150451577215
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,7 +178,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01865983, y: 0.56445765}
@@ -470,6 +510,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5226724638272003453}
   - component: {fileID: 5078953712307255959}
+  - component: {fileID: 5893257259346800071}
+  - component: {fileID: 4778428458525683207}
   m_Layer: 0
   m_Name: Alien2_0006_Arm
   m_TagString: Untagged
@@ -540,6 +582,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &5893257259346800071
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054464801797331535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.18206245, y: 0}
+  m_Size: {x: 0.5558752, y: 2.59}
+  m_Direction: 0
+--- !u!114 &4778428458525683207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054464801797331535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOut: 3
+  speed: 0
+  lifeTime: 0
+  hitEffect: {fileID: 0}
+  playersProjectile: 0
 --- !u!1 &8778236795646473977
 GameObject:
   m_ObjectHideFlags: 0

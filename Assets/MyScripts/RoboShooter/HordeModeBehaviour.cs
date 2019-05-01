@@ -65,7 +65,7 @@ public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
     {
         if (enemyState == EnemyState.dead)
         {
-            gameObject.tag =  "WalkableGround";
+            Destroy(gameObject,1);
         }
 
     }

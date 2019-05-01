@@ -26,19 +26,19 @@ public class GameManager : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
 
         if (singleton == null)
         {
             singleton = this;
+            DontDestroyOnLoad(this.gameObject);
 
         }
         else
         {
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
             return;
         }
-        DontDestroyOnLoad(singleton);
 
         //thePlayer = FindObjectOfType<TopDownControlls>();
 
