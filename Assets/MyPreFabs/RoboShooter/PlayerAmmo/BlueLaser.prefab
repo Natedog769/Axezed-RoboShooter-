@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80bc59d49039a84298e4ed83c8f27e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: Laser1
   damageOut: 2
   speed: 25
   lifeTime: 0.5

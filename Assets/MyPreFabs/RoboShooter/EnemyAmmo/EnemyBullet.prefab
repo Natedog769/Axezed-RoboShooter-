@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5931b645a3c1c642bc65145c067c446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: MG
   damageOut: 1
   speed: 25
   lifeTime: 0.5

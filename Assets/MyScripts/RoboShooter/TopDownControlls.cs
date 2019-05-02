@@ -589,7 +589,10 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
         if (shieldIsActive)
             activeShieldObject.ShieldTakesDamage(damageForThePlayer);
         else//shield is deavticated the new armor check returns an it and will reduce the damage by that internal power level ooh so sexy
-            activeBattery.batteryHP -= (damageForThePlayer-ArmorCheck());
+        {
+            FindObjectOfType<AudioManager>().Play("Damage2");
+            activeBattery.batteryHP -= (damageForThePlayer - ArmorCheck());
+        }
         /*the use of the batterying being an indepent object and the player no longer has to track a number for health genius!*/
     }
 

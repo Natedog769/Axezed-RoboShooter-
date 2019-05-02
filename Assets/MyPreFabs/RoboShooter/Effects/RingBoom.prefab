@@ -115,3 +115,4 @@ MonoBehaviour:
   lifeTime: 0.5
   shakeAmp: 0.15
   shakeFreq: 0.5
+  audioClipName: LaserHit

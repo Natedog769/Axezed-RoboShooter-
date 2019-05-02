@@ -115,3 +115,4 @@ MonoBehaviour:
   lifeTime: 0.3
   shakeAmp: 0.2
   shakeFreq: 0.5
+  audioClipName: BulletHit

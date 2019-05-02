@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceab7732f17c18c4596dfbe832d3aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: Missile
   damageOut: 3
   speed: 10
   lifeTime: 1

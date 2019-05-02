@@ -172,8 +172,10 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("PlayerAmmo"))
+        {
+            FindObjectOfType<AudioManager>().Play("Damage1");
             TakeDamage(other.gameObject.GetComponent<ProjectileBehaviour>().damageOut);
-
+        }
 
     }
 }

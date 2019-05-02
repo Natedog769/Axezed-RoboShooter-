@@ -115,3 +115,4 @@ MonoBehaviour:
   lifeTime: 0.4
   shakeAmp: 1
   shakeFreq: 1
+  audioClipName: SmallBoom

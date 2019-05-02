@@ -94,12 +94,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d7dc57e381f8a449103fb3cac71b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: MG
   damageOut: 1
   speed: 30
   lifeTime: 0.5
   hitEffect: {fileID: 114267930191699060, guid: 45aa68cb1d43a3241b2c16f9146fcfc9,
     type: 3}
   playersProjectile: 1
+  bulletHangTime: 0
 --- !u!70 &70165335704354286
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -115,3 +115,4 @@ MonoBehaviour:
   lifeTime: 1
   shakeAmp: 2
   shakeFreq: 3
+  audioClipName: MediumBoom

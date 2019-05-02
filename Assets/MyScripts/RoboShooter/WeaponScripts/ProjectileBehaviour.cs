@@ -4,15 +4,17 @@ using UnityEngine;
 
 public abstract class ProjectileBehaviour : MonoBehaviour {
 
+    public string audioClipName;
     public int damageOut;
     public float speed;
     public float lifeTime;
     public EffectScript hitEffect;
     public bool playersProjectile;
 
-    void Start()
+    void Awake()
     {
-
+        if (audioClipName.Length != 0)
+            FindObjectOfType<AudioManager>().Play(audioClipName);
     }
 
     // Update is called once per frame
