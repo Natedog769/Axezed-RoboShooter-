@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a471df1d5060c4ea92751001104ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClipName: Rocket2
+  audioClipName: Rocket
   damageOut: 5
   speed: 15
   lifeTime: 2
