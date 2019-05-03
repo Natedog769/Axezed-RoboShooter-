@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
 {
+    public string deathScream;
     public float speed;
     public float rotSpeed;
     public int hitPoints;
@@ -23,11 +24,12 @@ public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
     // Update is called once per frame
     void Update()
     {
-       if (enemyState == EnemyState.alive)
+        HPCheck();
+        if (enemyState == EnemyState.alive)
         { MoveTowardsTargetThreat();
         Rotate();
         // AttackIfCloseToTarget();
-        HPCheck();
+        
         }
     }
 
@@ -65,7 +67,8 @@ public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
     {
         if (enemyState == EnemyState.dead)
         {
-            Destroy(gameObject,1);
+            FindObjectOfType<AudioManager>().Play(deathScream);
+            Destroy(gameObject);
         }
 
     }

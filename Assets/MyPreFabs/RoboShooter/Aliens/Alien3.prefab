@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2739410082661026205}
   - component: {fileID: 2081280661541515845}
   - component: {fileID: 1819489811046218186}
+  - component: {fileID: 3277995229052381116}
   m_Layer: 0
   m_Name: Alien3
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e91b67b5efd31e4584523c7ed92695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathScream: AlienScream2
   speed: 4
   rotSpeed: 3
   hitPoints: 15
@@ -69,6 +71,27 @@ CapsuleCollider2D:
   m_Offset: {x: -0.00000009386754, y: 0.21258214}
   m_Size: {x: 1.971808, y: 1.4251683}
   m_Direction: 1
+--- !u!50 &3277995229052381116
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3198748370333982164}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3282228923296440808
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: 
   damageOut: 5
   speed: 0
   lifeTime: 0
@@ -611,6 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: 
   damageOut: 5
   speed: 0
   lifeTime: 0

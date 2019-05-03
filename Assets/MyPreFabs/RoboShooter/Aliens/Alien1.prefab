@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: 
   damageOut: 2
   speed: 0
   lifeTime: 0
@@ -243,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e91b67b5efd31e4584523c7ed92695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathScream: AlienScream3
   speed: 5
   rotSpeed: 3
   hitPoints: 2
@@ -297,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: 
   damageOut: 2
   speed: 0
   lifeTime: 0
@@ -490,6 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipName: 
   damageOut: 2
   speed: 0
   lifeTime: 0
