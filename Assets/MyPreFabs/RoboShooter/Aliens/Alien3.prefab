@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2739410082661026205}
-  - component: {fileID: 2081280661541515845}
+  - component: {fileID: 553186276095948664}
   - component: {fileID: 1819489811046218186}
   - component: {fileID: 3277995229052381116}
   m_Layer: 0
@@ -37,7 +37,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2081280661541515845
+--- !u!114 &553186276095948664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,15 +46,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3198748370333982164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e91b67b5efd31e4584523c7ed92695d, type: 3}
+  m_Script: {fileID: 11500000, guid: 73652f5851e0afe4a84118c672aadca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScream: AlienScream2
-  speed: 4
-  rotSpeed: 3
   hitPoints: 15
-  stoppingDistance: 1
-  retreatDistance: 0.5
+  xpValue: 100
+  moveSpeed: 4
+  rotSpeed: 3
+  thePlayer: {fileID: 0}
+  enemyState: 0
+  deathScream: AlienScream2
+  detectionRange: 10
+  playerInAttackRange: 0
+  distanceToPlayer: 0
+  patrolStop: {x: 0, y: 0, z: 0}
+  patrolStopTime: 8
+  patrolXFactor: 15
+  patrolYFactor: 15
 --- !u!70 &1819489811046218186
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -122,7 +122,7 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
 
         //these are the events the player is subcribed to
         //dont forget these if nothing is subscribed then it throws a null reference error
-        EnemyTank.EnemyDiedEvent += OnEnemyDied;
+        EnemyBehavior.EnemyDiedEvent += OnEnemyDied;
         ObjectiveScript.CompleteObjectiveEvent += OnObjectComplete;
         ColoredBossScript.CompleteObjective += OnBossDefeat;
 
@@ -152,9 +152,9 @@ public class TopDownControlls : MonoBehaviour, ITakeDamage {
         gameState = StateGame.win;
     }
 
-    void OnEnemyDied(EnemyTank enemyThatDied)
+    void OnEnemyDied(EnemyBehavior enemyThatDied)
     {
-        xPEarned += enemyThatDied.xPValue;
+        xPEarned += enemyThatDied.xpValue;
     }
 	
     //update for all the frames it will be doing this

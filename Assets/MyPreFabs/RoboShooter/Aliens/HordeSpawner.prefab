@@ -109,18 +109,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4513188a17e37b841902c0e5ccc174c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWave: 0
-  numberOfEnemiesThisWave: 0
-  spawnTimer: 0
-  spawnWaitTime: 2
-  waveTimer: 5
-  waveWaitTime: 5
+  thePlayer: {fileID: 0}
+  maxDistanceFromPlayer: 80
+  maxTimeBetweenWaves: 5
   enemiesOfThisWave: []
   enemyTypeForWave:
-  - {fileID: 606241696646726575, guid: 9ff347557baba4d49b00e8260ea93e66, type: 3}
-  - {fileID: 1732994858954196068, guid: 478eb5c3e475046229ff69722ab85366, type: 3}
-  - {fileID: 2081280661541515845, guid: 1838fdeba8abb410e9c3f4b2e800d236, type: 3}
-  numOfEnemiesToSpawnThisRound: 0a000000080000000600000004000000050000000400000006000000080000000a00000001000000
+  - {fileID: 6930042240521365819, guid: 9ff347557baba4d49b00e8260ea93e66, type: 3}
+  - {fileID: 5722251703498177638, guid: 478eb5c3e475046229ff69722ab85366, type: 3}
+  - {fileID: 553186276095948664, guid: 1838fdeba8abb410e9c3f4b2e800d236, type: 3}
+  numOfEnemiesToSpawnThisRound: 0a000000050000000a000000040000000a000000020000000a000000030000000a00000005000000
 --- !u!58 &2920193370104297376
 CircleCollider2D:
   m_ObjectHideFlags: 0

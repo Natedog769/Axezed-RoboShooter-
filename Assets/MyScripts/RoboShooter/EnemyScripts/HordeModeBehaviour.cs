@@ -56,7 +56,7 @@ public class HordeModeBehaviour : MonoBehaviour , ITakeDamage
 
     }
     void Rotate()
-    {//this module will step thru the turret array and move them all
+    {
         
         Vector2 direction = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
       

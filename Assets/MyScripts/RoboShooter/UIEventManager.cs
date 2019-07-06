@@ -33,7 +33,7 @@ public class UIEventManager : MonoBehaviour {
 
     void Start () {
         player = FindObjectOfType<TopDownControlls>().gameObject;
-        EnemyTank.EnemyDiedEvent += OnEnemyDied;
+        EnemyBehavior.EnemyDiedEvent += OnEnemyDied;
         ObjectiveScript.CompleteObjectiveEvent += OnObjectComplete;
         ColoredBossScript.CompleteObjective += OnBossDefeat;
     }
@@ -91,9 +91,9 @@ public class UIEventManager : MonoBehaviour {
        // gameState = StateGame.win;
     }
 
-    void OnEnemyDied(EnemyTank enemyThatDied)
+    void OnEnemyDied(EnemyBehavior enemyThatDied)
     {
-        xPEarned += enemyThatDied.xPValue;
+        xPEarned += enemyThatDied.xpValue;
     }
 
     //end events

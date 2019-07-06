@@ -203,10 +203,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4586104240405658950}
-  - component: {fileID: 606241696646726575}
+  - component: {fileID: 6930042240521365819}
   - component: {fileID: 8082477735334100278}
   - component: {fileID: 836670576888939103}
-  - component: {fileID: 7148714363290912159}
   m_Layer: 0
   m_Name: Alien1
   m_TagString: Enemy
@@ -232,7 +231,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &606241696646726575
+--- !u!114 &6930042240521365819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,15 +240,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5592736813114034045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e91b67b5efd31e4584523c7ed92695d, type: 3}
+  m_Script: {fileID: 11500000, guid: 73652f5851e0afe4a84118c672aadca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScream: AlienScream3
-  speed: 5
-  rotSpeed: 3
   hitPoints: 2
-  stoppingDistance: 1
-  retreatDistance: 0.5
+  xpValue: 50
+  moveSpeed: 5
+  rotSpeed: 3
+  thePlayer: {fileID: 0}
+  enemyState: 0
+  deathScream: AlienScream3
+  detectionRange: 15
+  playerInAttackRange: 0
+  distanceToPlayer: 0
+  patrolStop: {x: 0, y: 0, z: 0}
+  patrolStopTime: 2
+  patrolXFactor: 5
+  patrolYFactor: 5
 --- !u!50 &8082477735334100278
 Rigidbody2D:
   serializedVersion: 4
@@ -287,24 +294,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.025396232, y: -0.0000000030274663}
   m_Size: {x: 2.385854, y: 1.0000085}
   m_Direction: 1
---- !u!114 &7148714363290912159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5592736813114034045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47e37493a17f8041b4a8194d408c8e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClipName: 
-  damageOut: 2
-  speed: 0
-  lifeTime: 0
-  hitEffect: {fileID: 0}
-  playersProjectile: 0
 --- !u!1 &6028510757159276675
 GameObject:
   m_ObjectHideFlags: 0

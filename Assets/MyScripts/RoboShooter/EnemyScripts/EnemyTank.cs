@@ -3,21 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTank : MonoBehaviour, ITakeDamage {
+public class EnemyTank : EnemyBehavior, ITakeDamage {
 
 
 
     public bool smallTank;
     public bool mediumTank;
     public bool largeTank;
-    public int xPValue;
-    public int hitPoints;
     public GameObject deathExplosion;
-    enum EnemyState {dead = 0, alive = 1, attacking = 2}
-    EnemyState enemyState;
+    //enum EnemyState {dead = 0, alive = 1, attacking = 2}
+    //EnemyState enemyState;
     //event stuff
-    public delegate void EnemyDied(EnemyTank enemy);
-    public static event EnemyDied EnemyDiedEvent;
 
     public Transform[] patrolStops;
     int randomSpot;
@@ -25,20 +21,19 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
     float waitTime;
 
     //move to player variables
-    public float speed;
-    public float turretRotSpeed;
+   // public float speed;
+  //  public float turretRotSpeed;
     public float attackingDistance;
     public float stoppingDistance;
     public float retreatDistance;
 
     //shooting variables
-    Transform player;
+    //Transform player;
     public GameObject[] turret;
 
-	void Start () {
-        player = FindObjectOfType<TopDownControlls>().gameObject.transform;
-        
-        enemyState = EnemyState.alive;
+	public override void Start ()
+    {
+        base.Start();
         //partrol
 
         if (patrolStops != null)
@@ -47,7 +42,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
 	}
 	
 	// Update is called once per frame
-	public virtual void Update () {
+	void Update () {
 
         AIactions();
         HPCheck();
@@ -57,7 +52,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
     {
         if (mediumTank == true || smallTank == true)
         {//small and med tanks will patrol and then purue the player once in attacking range.
-            if (Vector2.Distance(transform.position, player.position) > attackingDistance)
+            if (Vector2.Distance(transform.position, thePlayer.transform.position) > attackingDistance)
             {
                 PatrolingMovement();
             }
@@ -71,7 +66,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
         else if (largeTank == true)
         {//if its a large tank then it will patrol and shoot only
 
-            if (Vector2.Distance(transform.position, player.position) > attackingDistance)
+            if (Vector2.Distance(transform.position, thePlayer.transform.position) > attackingDistance)
             {
                 PatrolingMovement();
             }
@@ -97,7 +92,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
         }
     }
 
-    public void HPCheck()
+    public override void HPCheck()
     {
         if (enemyState == EnemyState.dead)
         {
@@ -105,21 +100,20 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
             {
                 Instantiate(deathExplosion, transform.position, transform.rotation);
             }
-
-            EnemyDiedEvent(this);
-            Destroy(gameObject);
         }
-            
+
+        base.HPCheck();
+
     }
 
     void RotateTurret()
     {//this module will step thru the turret array and move them all
         for (int i = 0; i < turret.Length; i++)
         {
-            Vector2 direction = new Vector2(player.position.x - turret[i].transform.position.x, player.position.y - turret[i].transform.position.y);
+            Vector2 direction = new Vector2(thePlayer.transform.position.x - turret[i].transform.position.x, thePlayer.transform.position.y - turret[i].transform.position.y);
             if (smallTank == true)
-                transform.up = direction / turretRotSpeed;
-            else turret[i].transform.up = direction * turretRotSpeed;
+                transform.up = direction / rotSpeed;
+            else turret[i].transform.up = direction * rotSpeed;
         }
     }
 
@@ -128,7 +122,7 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
 
     void PatrolingMovement()
     {
-        transform.position = Vector2.MoveTowards(transform.position, patrolStops[randomSpot].position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, patrolStops[randomSpot].position, moveSpeed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, patrolStops[randomSpot].position) < .5f)
         {
@@ -145,17 +139,17 @@ public class EnemyTank : MonoBehaviour, ITakeDamage {
     public void MoveTowardsPlayer()
     {
 
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+        if (Vector2.Distance(transform.position, thePlayer.transform.position) > stoppingDistance)
         {//move to player
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, thePlayer.transform.position, moveSpeed * Time.deltaTime);
         }
-        else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
+        else if (Vector2.Distance(transform.position, thePlayer.transform.position) < stoppingDistance && Vector2.Distance(transform.position, thePlayer.transform.position) > retreatDistance)
         {
             transform.position = this.transform.position;
         }
-        else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
+        else if (Vector2.Distance(transform.position, thePlayer.transform.position) < retreatDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, thePlayer.transform.position, -moveSpeed * Time.deltaTime);
         }
 
     }
